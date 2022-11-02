@@ -22,6 +22,8 @@
 		14DB40C6291252AD00F92DE7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB40C5291252AD00F92DE7 /* ProfileView.swift */; };
 		14DB40C8291252B400F92DE7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB40C7291252B400F92DE7 /* ProfileViewController.swift */; };
 		14DB40CB2912570A00F92DE7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14DB40CA2912570A00F92DE7 /* SnapKit */; };
+		14DB40CD2912587E00F92DE7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB40CC2912587E00F92DE7 /* CustomTextField.swift */; };
+		14DB40D02912636600F92DE7 /* Transition + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB40CF2912636600F92DE7 /* Transition + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		14DB40C02912529400F92DE7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		14DB40C5291252AD00F92DE7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		14DB40C7291252B400F92DE7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		14DB40CC2912587E00F92DE7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		14DB40CF2912636600F92DE7 /* Transition + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +81,9 @@
 				14DB40C4291252A300F92DE7 /* Profile */,
 				14DB40BD2912528500F92DE7 /* Login */,
 				14DB40B8291251B000F92DE7 /* Signup */,
+				14DB40CE2912588600F92DE7 /* Custom */,
 				14DB40B12912508D00F92DE7 /* Base */,
+				14DB40CF2912636600F92DE7 /* Transition + Extension.swift */,
 				1444CD9629124F6400665347 /* AppDelegate.swift */,
 				1444CD9829124F6400665347 /* SceneDelegate.swift */,
 				1444CD9A29124F6400665347 /* ViewController.swift */,
@@ -123,6 +129,14 @@
 				14DB40C5291252AD00F92DE7 /* ProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		14DB40CE2912588600F92DE7 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				14DB40CC2912587E00F92DE7 /* CustomTextField.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,9 +224,11 @@
 				1444CD9B29124F6400665347 /* ViewController.swift in Sources */,
 				14DB40C8291252B400F92DE7 /* ProfileViewController.swift in Sources */,
 				1444CD9729124F6400665347 /* AppDelegate.swift in Sources */,
+				14DB40CD2912587E00F92DE7 /* CustomTextField.swift in Sources */,
 				1444CD9929124F6400665347 /* SceneDelegate.swift in Sources */,
 				14DB40BF2912528C00F92DE7 /* LoginView.swift in Sources */,
 				14DB40B32912509900F92DE7 /* BaseView.swift in Sources */,
+				14DB40D02912636600F92DE7 /* Transition + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

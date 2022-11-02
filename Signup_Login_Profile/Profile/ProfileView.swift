@@ -5,7 +5,6 @@
 //  Created by 도헌 on 2022/11/02.
 //
 
-import Foundation
 import UIKit
 
 final class ProfileView: BaseView {
@@ -18,6 +17,8 @@ final class ProfileView: BaseView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func setupUI() { }
+    override func setupUI() {
+        self.backgroundColor = .systemBackground
+    }
     override func setupConstraints() { }
 }
