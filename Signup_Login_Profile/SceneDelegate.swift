@@ -22,7 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: scene)
         
-        let viewController = SignupViewController()
+        let rootViewControllerToggle = UserDefaults.standard.string(forKey: "token")
+        
+        let viewController = rootViewControllerToggle == nil ? SignupViewController() : ProfileViewController()
         let rootViewcontroller = UINavigationController(rootViewController: viewController)
         
         window?.rootViewController = rootViewcontroller

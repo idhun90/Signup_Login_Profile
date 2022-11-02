@@ -11,13 +11,13 @@ import SnapKit
 
 final class LoginView: BaseView {
     
-    private let emailTextField: CustomTextField = {
+    let emailTextField: CustomTextField = {
         let view = CustomTextField()
         view.setup(placeholder: "이메일을 입력해주세요.", keyboardType: .default, secureText: false)
         return view
     }()
     
-    private let passwordTextField: CustomTextField = {
+    let passwordTextField: CustomTextField = {
         let view = CustomTextField()
         view.setup(placeholder: "비밀번호를 입력해주세요.", keyboardType: .default, secureText: true)
         return view

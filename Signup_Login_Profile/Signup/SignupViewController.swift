@@ -34,9 +34,13 @@ final class SignupViewController: BaseViewController {
     }
     
     @objc private func signup() {
-        let api = SeSACAPI.signup(userName: self.mainView.userNameTextField.text!, email: self.mainView.emailTextField.text!, password: self.mainView.passwordTextField.text!)
+        
+        guard let userName = self.mainView.userNameTextField.text else { return }
+        guard let email = self.mainView.emailTextField.text else { return }
+        guard let password = self.mainView.passwordTextField.text else { return }
+        
+        let api = SeSACAPI.signup(userName: userName, email: email, password: password)
         AF.request(api.url, method: .post, parameters: api.parameters ,headers: api.headers).responseString { [weak self] response in
-            
             switch response.result {
             case .success(_):
                 print(response)
