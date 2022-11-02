@@ -24,6 +24,8 @@ class CustomTextField: UITextField {
         self.keyboardType = keyboardType
         self.isSecureTextEntry = secureText
         
+        self.clearButtonMode = .always
+        
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.systemGray6.cgColor
         

@@ -24,6 +24,8 @@
 		14DB40CB2912570A00F92DE7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14DB40CA2912570A00F92DE7 /* SnapKit */; };
 		14DB40CD2912587E00F92DE7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB40CC2912587E00F92DE7 /* CustomTextField.swift */; };
 		14DB40D02912636600F92DE7 /* Transition + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB40CF2912636600F92DE7 /* Transition + Extension.swift */; };
+		14DB40D32912702600F92DE7 /* SeSACAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB40D22912702600F92DE7 /* SeSACAPI.swift */; };
+		14DB40D6291271D200F92DE7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 14DB40D5291271D200F92DE7 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,7 @@
 		14DB40C7291252B400F92DE7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		14DB40CC2912587E00F92DE7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		14DB40CF2912636600F92DE7 /* Transition + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition + Extension.swift"; sourceTree = "<group>"; };
+		14DB40D22912702600F92DE7 /* SeSACAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14DB40CB2912570A00F92DE7 /* SnapKit in Frameworks */,
+				14DB40D6291271D200F92DE7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,7 @@
 		1444CD9529124F6400665347 /* Signup_Login_Profile */ = {
 			isa = PBXGroup;
 			children = (
+				14DB40D129126FB400F92DE7 /* API */,
 				14DB40C4291252A300F92DE7 /* Profile */,
 				14DB40BD2912528500F92DE7 /* Login */,
 				14DB40B8291251B000F92DE7 /* Signup */,
@@ -139,6 +144,14 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
+		14DB40D129126FB400F92DE7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				14DB40D22912702600F92DE7 /* SeSACAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +170,7 @@
 			name = Signup_Login_Profile;
 			packageProductDependencies = (
 				14DB40CA2912570A00F92DE7 /* SnapKit */,
+				14DB40D5291271D200F92DE7 /* Alamofire */,
 			);
 			productName = Signup_Login_Profile;
 			productReference = 1444CD9329124F6400665347 /* Signup_Login_Profile.app */;
@@ -188,6 +202,7 @@
 			mainGroup = 1444CD8A29124F6400665347;
 			packageReferences = (
 				14DB40C92912570A00F92DE7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				14DB40D4291271D200F92DE7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1444CD9429124F6400665347 /* Products */;
 			projectDirPath = "";
@@ -216,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14DB40D32912702600F92DE7 /* SeSACAPI.swift in Sources */,
 				14DB40C12912529400F92DE7 /* LoginViewController.swift in Sources */,
 				14DB40BA291251BB00F92DE7 /* SignupView.swift in Sources */,
 				14DB40C6291252AD00F92DE7 /* ProfileView.swift in Sources */,
@@ -464,6 +480,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		14DB40D4291271D200F92DE7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -471,6 +495,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 14DB40C92912570A00F92DE7 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		14DB40D5291271D200F92DE7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14DB40D4291271D200F92DE7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

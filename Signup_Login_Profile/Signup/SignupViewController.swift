@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Alamofire
+
 final class SignupViewController: BaseViewController {
     
     private let mainView = SignupView()
@@ -18,7 +20,7 @@ final class SignupViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mainView.signupButton.addTarget(self, action: #selector(goToLogin), for: .touchUpInside)
+        self.mainView.signupButton.addTarget(self, action: #selector(signup), for: .touchUpInside)
         
     }
     
@@ -26,8 +28,22 @@ final class SignupViewController: BaseViewController {
         title = "회원가입"
     }
     
-    @objc private func goToLogin() {
+    private func goToLogin() {
         let vc = LoginViewController()
         transitionViewController(viewController: vc, style: .push, animated: true)
+    }
+    
+    @objc private func signup() {
+        let api = SeSACAPI.signup(userName: self.mainView.userNameTextField.text!, email: self.mainView.emailTextField.text!, password: self.mainView.passwordTextField.text!)
+        AF.request(api.url, method: .post, parameters: api.parameters ,headers: api.headers).responseString { [weak self] response in
+            
+            switch response.result {
+            case .success(_):
+                print(response)
+                self?.goToLogin()
+            case .failure(_):
+                print(response.response?.statusCode)
+            }
+        }
     }
 }
